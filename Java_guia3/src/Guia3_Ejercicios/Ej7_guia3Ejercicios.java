@@ -17,11 +17,13 @@ package Guia3_Ejercicios;
 
 import java.util.Scanner;
 
-public class Ej7_guia3Ejercicios_FALTA {
+ public class Ej7_guia3Ejercicios {
     
     public static void main(String[] args) {
         String frase;
         int x, contCorrectas, contIncorrectos;
+        contCorrectas = 0;
+        contIncorrectos = 0;
         
         Scanner leer = new Scanner(System.in);
         
@@ -31,17 +33,17 @@ public class Ej7_guia3Ejercicios_FALTA {
             
             x = frase.length();
             
-            if (x>5 || frase.substring(0,1).equalsIgnoreCase("X") != true || frase.substring(x-1).equalsIgnoreCase("O") != true) {
-                contIncorrectos = conIncorrectos + 1;
+            if ((x>5 || frase.substring(0,1).equalsIgnoreCase("X") != true || frase.substring(x-1).equalsIgnoreCase("O") != true) &&(!frase.equals("&&&&&")) ){
+                contIncorrectos = contIncorrectos + 1;
             }
-            if () {
-                
+            if (x < 6 && frase.substring(0,1).equalsIgnoreCase("X") == true && frase.substring(x-1).equalsIgnoreCase("O") == true) {
+                contCorrectas = contCorrectas + 1;
             }
-            
-            
-        }while();
+                       
+        }while(!frase.equals("&&&&&"));
         
-        System.out.println(frase);
+        System.out.println("La cantidad de frases incorrectas son: " + contIncorrectos);
+        System.out.println("La cantidad de frases correctas son: " + contCorrectas);
     }
    
 }

@@ -17,7 +17,8 @@ public class Ej1_guia2Ejercicios {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Scanner ingresar = new Scanner(System.in);
+        System.out.println("Ingrese dos números enteros");
+        Scanner ingresar = new Scanner(System.in);
         int num1 = ingresar.nextInt();
         int num2 = ingresar.nextInt();     
         int suma = num1 + num2;
