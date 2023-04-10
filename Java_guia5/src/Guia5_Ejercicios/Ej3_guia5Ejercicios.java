@@ -38,7 +38,7 @@ public class Ej3_guia5Ejercicios {
         //copia del numero a analizar
         int rep;
         //bucle donde se va a generar el numero aleatorio y se van a contar las cifras por cada numero
-        for(int i =0 ; i<=N-1; i++){
+        for(int i =0 ; i<N; i++){
             contador=1;
             //se genera el numero aleatorio
             numeros[i]= dado.nextInt(10000);
