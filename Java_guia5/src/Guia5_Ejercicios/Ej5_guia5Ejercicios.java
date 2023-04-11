@@ -7,12 +7,48 @@ obtiene cambiando sus filas por columnas (o viceversa).
  */
 package Guia5_Ejercicios;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Erica
  */
 public class Ej5_guia5Ejercicios {
-    public static void main(String[] args) {
-        
+   public static void main(String[] args) {
+        int[][] vMatriz = new int[3][3];
+        cargarMatriz(vMatriz);  
+        mostrarMatriz(vMatriz);
+        if (matrizAntisimetrica(vMatriz)) {
+            System.out.println("La matriz es Antisimetrica!");
+        }else   {
+            System.out.println("La matriz no es Antisimetrica");
+        }
+    }
+    public static void cargarMatriz (int[][] matriz){
+        Scanner read = new Scanner(System.in);
+        System.out.println("Ingresar los valores de la matriz de 3x3");
+        for (int i = 0; i <3 ; i++) {
+            for (int j = 0; j <3; j++) {
+               matriz[i][j]= read.nextInt(); 
+            }
+        }    
+    }
+    public static void mostrarMatriz (int[][] verMatriz){
+        for (int i = 0; i <3 ; i++) {
+            for (int j = 0; j <3; j++) {
+                System.out.print( "[ " + verMatriz[i][j] + " ]" ); 
+            }
+            System.out.println("");
+        }
+    }
+    public static boolean matrizAntisimetrica (int [][] matrizAnti){
+        for (int i = 0; i <3 ; i++) {
+            for (int j = 0; j <3; j++) {
+                if(matrizAnti[i][j] + matrizAnti[j][i] != 0){
+                    return false;
+                }
+            }
+        } 
+        return true;
     }
 }
