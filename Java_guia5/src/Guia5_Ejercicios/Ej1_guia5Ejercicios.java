@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Erica
  */
-public class Ej1_guia5EjerciciosExtra {
+public class Ej1_guia5Ejercicios {
 
     public static void main(String[] args) {
 

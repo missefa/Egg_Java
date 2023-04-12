@@ -21,12 +21,37 @@ link: https://quantdare.com/numeros-de-fibonacci/
  */
 package Guia5_EjerciciosExtra;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Erica
  */
 public class Ej7_Guia5EjerciciosExtra {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese el tamaño del vector");
+        int num = leer.nextInt();
+        int[] vector = new int [num];
+        
+            for (int i = 0; i < num; i++) {
+                if (i <=1){
+                    vector[i]=1;
+                }else{
+                vector[i]=vector[i-1]+vector[i-2];
+                }
+                
+            }
+            System.out.println("los primeros " + num + " numeros de Fibonacci son: ");
+            for (int i = 0; i < num; i++) {
+                System.out.print(" [ " + vector[i] + " ] "); 
+            
+            }
+            
+            System.out.println(" ");
+        
+ 
         
     }
+    
 }

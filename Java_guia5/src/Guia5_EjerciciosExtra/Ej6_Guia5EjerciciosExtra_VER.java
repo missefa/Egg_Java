@@ -11,12 +11,27 @@ siguientes funciones de Java substring(), Length() y Math.random().
  */
 package Guia5_EjerciciosExtra;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Erica
  */
-public class Ej6_Guia5EjerciciosExtra {
+public class Ej6_Guia5EjerciciosExtra_VER {
+
     public static void main(String[] args) {
-        
+
+        System.out.println("ingrese 5 palabras");
+        Scanner leer;
+        leer = new Scanner(System.in);
+        String[] palabra = new String[5];
+        String[][] sopa = new String[20][20];
+        for (int i = 0; i < 5; i++) {
+            while (palabra[i].length() < 3 || palabra[i].length() > 5) {
+                System.out.println("debe ingresar entre 3 y 5 caracteres ");
+                palabra[i] = leer.nextLine();
+            }
+        }
+
     }
 }
