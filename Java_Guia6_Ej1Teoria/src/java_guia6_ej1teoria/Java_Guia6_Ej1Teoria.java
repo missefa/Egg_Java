@@ -1,7 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Es tu turno, crea tu propio proyecto con la clase Persona.
+Seguiremos trabajando sobre la clase Persona que creamos y ahora deberás
+sumarle 3 atributos que creas pertinentes.
+Volveremos a usar la clase Persona y vamos a crear objetos en tu Main
+utilizando los constructores.
+Continuaremos con nuestra clase Persona y vamos a primero crear los getter y
+setter y después invocarlos desde el Main con alguno de los objetos que
+instanciaste.
  */
 package java_guia6_ej1teoria;
 
