@@ -16,7 +16,7 @@ import java_guia6_ej1teoria.entidades.Persona;
  *
  * @author Erica
  */
-public class Java_Guia6_Ej1Teoria {
+public class Java_guia6_Ej1Teoria {
 
     /**
      * @param args the command line arguments

@@ -8,7 +8,7 @@ libro y el número de páginas.
  */
 package java_guia6_ej1ejercicios;
 
-import java.util.Scanner;
+
 import java_guia6_ej1ejercicios.entidades.Libro;
 
 /**
@@ -21,12 +21,11 @@ public class Java_guia6_Ej1Ejercicios {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        Scanner leer = new Scanner(System.in);
-       
+
         Libro book = new Libro();
+
+        Libro.cargarLibro(book);
         
-        System.out.println(book.ISBN+" "+book.Titulo+" "+book.Autor+" "+book.Paginas);
+        Libro.mostrarLibro(book);
     }
-    
 }
