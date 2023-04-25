@@ -1,62 +1,31 @@
+/*
+Crear una clase llamada Libro que contenga los siguientes atributos:
+ISBN, Título, Autor, Número de páginas, y un constructor con todos los
+atributos pasados por parámetro y un constructor vacío. Crear un
+método para cargar un libro pidiendo los datos al usuario y luego
+informar mediante otro método el número de ISBN, el título, el autor del
+libro y el número de páginas.
+ */
 package java_guia7_ej1ejercicios;
 
-import java.util.Scanner;
-import java_guia7_ej1ejercicios.servicios.CuentaBancariaServicio;
 
+import java_guia7_ej1ejercicios.entidades.Libro;
+
+/**
+ *
+ * @author Erica
+ */
 public class Java_guia7_Ej1Ejercicios {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Scanner leerNum = new Scanner(System.in);
 
-        CuentaBancariaServicio c1 = new CuentaBancariaServicio();
+        Libro book = new Libro();
 
-        int opcion;
-
-        do {
-            System.out.println("");
-            System.out.println("Menú de opciones: ");
-            System.out.println("1 - Crear una cuenta ");
-            System.out.println("2 - Ingresar dinero ");
-            System.out.println("3 - Retirar dinero ");
-            System.out.println("4 - Extracción rápida ");
-            System.out.println("5 - Consultar saldo ");
-            System.out.println("6 - Consultar datos ");
-            System.out.println("7 - Salir del programa ");
-            System.out.print("Ingrese la opción deseada: ");
-
-            opcion = leerNum.nextInt();
-
-            switch (opcion) {
-
-                case 1:
-                    c1.crearCuenta();
-                    break;
-                case 2:
-                    c1.ingresarDinero();
-                    break;
-                case 3:
-                    c1.retirarDinero();
-                    break;
-                case 4:
-                    c1.extraccionRapida();
-                    break;
-                case 5:
-                    c1.consultarSaldo();
-                    break;
-                case 6:
-                    c1.consultarDatos();
-                    break;
-                case 7:
-
-                    break;
-
-                default:
-                    System.out.println("La opción ingresada no existe");
-
-            }
-
-        } while (opcion != 7);
-
+        Libro.cargarLibro(book);
+        
+        Libro.mostrarLibro(book);
     }
-
 }
