@@ -45,3 +45,29 @@ public class Java_guia8_Ej3Ejercicios_falta {
     }
     
 }
+
+import Entidad.Persona;
+import Servicio.Servicio;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Servicio ps = new Servicio();
+
+        Persona[] personas = new Persona[4];
+        int[] imcs = new int[1];
+        for (int i = 0; i < 4; i++) {
+            personas[i] = ps.CrearPersona();
+            imcs[i] = ps.CalcularIMC(personas[i]);
+            ps.esMayorDeEdad(personas[i]);
+            if(ps.CalcularIMC(personas[i]) == 1){
+                System.out.println("1");
+            }else if (ps.CalcularIMC(personas[i]) == -1){
+                System.out.println("-1");
+            }else{
+                System.out.println("0");   
+            }
+
+        }
+    }
+}
