@@ -11,11 +11,19 @@ package Guia2_Teoria;
  */
 public class Ej1_guia2Teoria {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+     
+        int num = 10;
+        String palabra = "Roberta";
+        double dec = 0.5;
+        char letra = 'a';
+        boolean bandera = false;
+        short numCorto = 13;
+        
+        System.out.println(num + " " + palabra + " " + dec + " " + letra + " " + bandera + " " + numCorto);
+        
+        
     }
     
 }
