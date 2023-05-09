@@ -23,7 +23,7 @@ import java_guia9_ej6ejercicios_otro.entidades.Curso;
 
 public class CursoServicio {
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-
+  
     public String[] cargarAlumnos() {
 
         String[] alumnos = new String[5];
@@ -38,7 +38,7 @@ public class CursoServicio {
     }
 
     public Curso crearCurso() {
-
+        
         String cursoNom, turno;
         int horasPorDia, horasPorSemana;
         double precio;
@@ -50,7 +50,7 @@ public class CursoServicio {
         System.out.print("Ingrese cantidad de horas por dia: ");
         horasPorDia = leer.nextInt();
 
-        System.out.print("Ingrese cantidad de horas por semana: ");
+        System.out.print("Ingrese cantidad de días por semana: ");
         horasPorSemana = leer.nextInt();
 
         System.out.print("Ingrese turno: ");
@@ -58,7 +58,7 @@ public class CursoServicio {
             turno = leer.next();
 
             if (!turno.equalsIgnoreCase("mañana") && !turno.equalsIgnoreCase("tarde")) {
-                System.out.print(" Turno invalido. Ingrese nuevamente: ");
+                System.out.print(" Turno inválido. Ingrese nuevamente: ");
             }
 
         } while (!turno.equalsIgnoreCase("mañana") && !turno.equalsIgnoreCase("tarde"));
