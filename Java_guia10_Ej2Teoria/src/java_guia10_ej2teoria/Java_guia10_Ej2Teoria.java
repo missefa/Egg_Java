@@ -21,51 +21,55 @@ public class Java_guia10_Ej2Teoria {
    
     public static void main(String[] args) {
         //LISTAS:
-        ArrayList<Integer> numerosA = new ArrayList();
-        int x = 2;
-        int x2 = 0;
-        int x3 = 1;
-        int x4 = 10;
-        int x5 = 1;
+        ArrayList<Integer> numeros = new ArrayList();
+        Integer x = 2;
+        Integer x2 = 0;
+        Integer x3 = 1;
+        Integer x4 = 10;
+        Integer x5 = 1;
 
-        numerosA.add(x);
-        numerosA.add(x2);
-        numerosA.add(x4);
-        numerosA.add(x3);
-        numerosA.add(x5);
+        numeros.add(x); //Agregamos un primer elemento al ArrayList
+        numeros.add(x2); //Agregamos un segundo elemento al ArrayList
+        numeros.add(x3); //Agregamos un tercer elemento al ArrayList
+        numeros.add(x4); //Agregamos un cuarto elemento al ArrayList
+        numeros.add(x5); //Agregamos un quinto elemento al ArrayList
         
-        System.out.println(numerosA);
-        System.out.println(numerosA.size());
+        System.out.println(numeros); //Mostramos los elementos del ArrayList. Los coloca por orden de ingreso
+        System.out.println(numeros.size()); //Mostramos dimensión del ArrayList
 
-        numerosA.remove(x5);
+        numeros.remove(x4); //Removemos el elemento "x4" del ArrayList
 
-        System.out.println(numerosA);
+        System.out.println(numeros);
+        System.out.println(numeros.size());
+
         
-        numerosA.remove(0); 
-        System.out.println(numerosA);
-        System.out.println(numerosA.size());
+        numeros.remove(0); //Removemos la posición 0 del ArrayList
+        System.out.println(numeros);
+        System.out.println(numeros.size());
 
+        System.out.println("----------------");
 
         //CONJUNTOS (SETS):
-        HashSet<Integer> numerosB = new HashSet();
-        Integer y = 21;
-        Integer y2 = 23;
-        Integer y3 = 22;
-        Integer y4 = 20;
-        Integer y5 = 24;
+        HashSet<String> palabras = new HashSet();
+        String y = "loro";
+        String y2 = "camino";
+        String y3 = "artesana";
+        String y4 = "sortija";
+        String y5 = "pelota";
 
-        numerosB.add(y);
-        numerosB.add(y2);
-        numerosB.add(y3);
-        numerosB.add(y4);
-        numerosB.add(y5);
-        System.out.println(numerosB);
+        palabras.add(y);
+        palabras.add(y2);
+        palabras.add(y3);
+        palabras.add(y4);
+        palabras.add(y5);
+        System.out.println(palabras); //Mostramos los elementos del Set. Los ordena en forma aleatoria.
         
-        numerosB.remove(y4);
-        System.out.println(numerosB);
-        System.out.println(numerosB.size());
+        palabras.remove(y3); //Removemos el elemento "y3" del set
+        System.out.println(palabras);
+        System.out.println(palabras.size());
 
-
+        System.out.println("----------------");
+        
         //MAPAS:
         HashMap<Integer, String> alumnos = new HashMap();
         int dni = 34576189;
@@ -83,10 +87,16 @@ public class Java_guia10_Ej2Teoria {
         alumnos.put(dni3, nombreAlumno3); //Agregamos la llave y el valor
         alumnos.put(dni4, nombreAlumno4); //Agregamos la llave y el valor
         alumnos.put(dni5, nombreAlumno5); //Agregamos la llave y el valor
+        
+        System.out.println(alumnos); //Mostramos los elementos del Map. Los ordena en forma aleatoria.
+        
+        alumnos.remove(dni4); //Removemos la llave (por identificador de elemento)
         System.out.println(alumnos);
         
-        alumnos.remove(dni4);
+        alumnos.remove(34576185); //Removemos la llave (por valor de elemento)
         System.out.println(alumnos);
+        
+        System.out.println("----------------");
 
     }
     
