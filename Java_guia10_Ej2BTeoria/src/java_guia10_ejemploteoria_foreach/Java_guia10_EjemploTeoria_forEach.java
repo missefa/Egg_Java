@@ -4,7 +4,7 @@
  *  Recorrer una colección con for each.
  * 
  */
-package java_guia10_ej2bteoria;
+package java_guia10_ejemploteoria_foreach;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import java.util.HashSet;
  *
  * @author Erica
  */
-public class Java_guia10_Ej2BTeoria {
+public class Java_guia10_EjemploTeoria_forEach {
 
    
     public static void main(String[] args) {
