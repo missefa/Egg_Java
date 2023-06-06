@@ -1,21 +1,18 @@
 /*
- Clase Jugador: esta clase posee los siguientes atributos: id (representa el número del
-jugador), nombre (Empezara con Jugador más su ID, “Jugador 1” por ejemplo) y mojado (indica
-si está mojado o no el jugador). El número de jugadores será decidido por el usuario, pero
-debe ser entre 1 y 6. Si no está en este rango, por defecto será 6.
-Métodos:
-• disparo(Revolver r): el método, recibe el revolver de agua y llama a los métodos de
-mojar() y siguienteChorro() de Revolver. El jugador se apunta, aprieta el gatillo y si el
-revolver tira el agua, el jugador se moja. El atributo mojado pasa a false y el método
-devuelve true, sino false.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Entidades;
+package entidades;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ *
+ * @author JosePc
+ */
 public class Jugador {
-   
+
     Scanner leerNum = new Scanner(System.in);
 
     private Integer id;
@@ -67,19 +64,18 @@ public class Jugador {
 
     /* @crearJugadores
      */
-    public void crearJugadores(){
+    public ArrayList crearJugadores(){
         
         
-       ArrayList  
-        
+       ArrayList<Jugador>  jugadores = new ArrayList();
         System.out.println("Ingrese la cantidad de jugadores: ");
         int cant = leerNum.nextInt();
 
-        if (cant < 1 || cant > 6) {
+        if (cant < 1 || cant > 7) {
             cant = 6;
         }
 
-        for (int i = 0; i < cant; i++) {
+        for (int i = 1; i < cant; i++) {
 
             Jugador j = new Jugador();
             j.setId(i);
@@ -87,8 +83,12 @@ public class Jugador {
             j.setMojado(false);
             jugadores.add(j);
 
-        }
+        } 
+        return jugadores;
+    } 
+}   
 
-    }
 
-}
+
+
+

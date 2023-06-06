@@ -1,18 +1,8 @@
 /*
- Clase Juego: esta clase posee los siguientes atributos: Jugadores (conjunto de Jugadores) y
-Revolver
-Métodos:
-• llenarJuego(ArrayList<Jugador>jugadores, Revolver r): este método recibe los jugadores
-y el revolver para guardarlos en los atributos del juego.
-10
-• ronda(): cada ronda consiste en un jugador que se apunta con el revolver de agua y
-aprieta el gatillo. Sí el revolver tira el agua el jugador se moja y se termina el juego, sino se
-moja, se pasa al siguiente jugador hasta que uno se moje. Si o si alguien se tiene que
-mojar. Al final del juego, se debe mostrar que jugador se mojó.
-Pensar la lógica necesaria para realizar esto, usando los atributos de la clase Juego.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Entidades;
-
+package entidades;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -48,7 +38,7 @@ public class Juego {
         this.revolver = revolver;
     }
 
-    public void llenarJuego(ArrayList<Jugador> jugadores, RevolverDeAgua r) {
+    public Juego llenarJuego(ArrayList<Jugador> jugadores, RevolverDeAgua r) {
 
       
     Juego jueg = new Juego();
@@ -57,17 +47,30 @@ public class Juego {
 
     jueg.setJugador (jugadores);
 
+return jueg;
 
 }
 
 public void ronda(){
         boolean mojo;
+        System.out.println("Juego en proceso");
+        System.out.println("------------------------");
+        
         
         for (Jugador jugador1 : jugador) {
-            
+            System.out.println("ID Jugador: " + jugador1.getId());
+            System.out.println("Jugador: " + jugador1.getNombre());
+                       
            mojo = jugador1.disparo(revolver);
            
-           break;
+           if (mojo) {
+               System.out.println("EL jugador está mojado y fuera de juego");
+               System.out.println("------------------------------------------------------");
+                 break;
+           }
+           
+           
+         
            
         }
             
