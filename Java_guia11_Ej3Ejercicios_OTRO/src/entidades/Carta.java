@@ -86,13 +86,13 @@ public class Carta {
 
         for (int i = 0; i < mazo.size(); i++) {
 
-            Carta cartita = new Carta();
+            Carta car = new Carta();
 
-            cartita = mazo.get(i);
+            car = (Carta) mazo.get(i);
 
-            System.out.println(cartita.getNumero());
-            System.out.println(cartita.getPalo());
-            System.out.println(cartita.isSalio());
+            System.out.println(car.getNumero());
+            System.out.println(car.getPalo());
+            System.out.println(car.isSalio());
 
         }
 

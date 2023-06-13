@@ -15,6 +15,7 @@ package Entidades;
 
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Juego {
@@ -44,6 +45,47 @@ public class Juego {
     public void setRev(Revolver rev) {
         this.rev = rev;
     }
+
+    
+
+    public void ronda() {
+        boolean mojo;
+        System.out.println("Juego en proceso");
+        System.out.println("------------------------");
+
+        for (Jugador jugador1 : jugadores) {
+            System.out.println("ID Jugador: " + jugador1.getId());
+            System.out.println("Jugador: " + jugador1.getNombre());
+
+            mojo = jugador1.disparo(rev);
+
+            if (mojo) {
+                System.out.println("EL jugador está mojado y fuera de juego");
+                System.out.println("------------------------------------------------------");
+                break;
+            }
+        }
+
+    }
+    
+    
+    public void llenarJuego(){
+        Scanner scr = new Scanner(System.in);
+        
+        System.out.print("__________Ruleta Rusa (de agua)__________"+"\nIngrese cantidad de jugadores (Max = 6) > ");
+        int cantJugadores = scr.nextInt();    
+       
+        
+        for (int i = 1; i <= cantJugadores ; i++) {
+            Jugador n = new Jugador(i);
+            System.out.print("Ingrese nombre del jugador > ");
+            n.setNombre(scr.next());
+            jugadores.add(n);
+        }
+        rev.llenarRevolver();
+        
+    }
+    
 
     @Override
     public String toString() {
